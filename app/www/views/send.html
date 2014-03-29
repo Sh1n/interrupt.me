@@ -3,19 +3,50 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<style>
-    #header{
-        height: 70px;
-        background: #E74B3c;
-        line-height: 70px;
-    }
-    a{
-        color: white;
-        font-weight: lighter;
-        font-size: 15px;
-    }
-</style>
-<body>
+    <style>
+        
+        #header{
+            height: 70px;
+            background: #E74B3c;
+            line-height: 70px;
+        }
+
+        a{
+            color: white;
+            font-weight: lighter;
+            font-size: 15px;
+        }
+
+        .name{
+            font-weight: bold;
+            font-size: 48px;
+            color: #E74B3c;
+            text-align: center;
+            position: relative;
+            top: -65px;
+        }
+
+        .text{
+            color: #3C5A99;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            top: -70px;
+        }
+
+        .hellyes{
+            position: relative;
+            top: -40px;
+        }
+        
+        .badge-img {
+            position: relative;
+            top: -75px;
+        }
+        
+    </style>
+
     <div class="row-fluid clearfix" id="header">
         
         <div class="col-xs-3">
@@ -27,6 +58,39 @@
         </div>
 
     </div>
+
+    <br />
+
+    <div class="row-fluid clearfix">
+        <!-- Profile Badge -->
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+
+            <div class="media">
+                <img class="img-circle" src="http://placehold.it/250x250" alt=""/>
+                <img class="badge-img img-circle" src="http://placehold.it/100x100" />
+            </div>
+
+        </div>
+    </div>
+
+    <h2 class="name">Francesco</h2>
+
+    <div class="row-fluid">
+        <div class="col-xs-10 col-xs-offset-1">
+            
+            <p class="text">said HELL yes to your POUZ</p>
+            
+
+            <button class="btn btn-success btn-block btn-lg hellyes">
+                <img src="../img/hell-yes.svg" height="20px"/> &nbsp; That's great man!
+            </button>
+            
+        </div>
+    </div>
+
+
+
 
 <div class="container-fluid">
     
