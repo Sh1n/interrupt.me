@@ -17,32 +17,75 @@
             font-size: 15px;
         }
 
-        .name{
-            font-weight: bold;
-            font-size: 48px;
-            color: #E74B3c;
-            text-align: center;
-            position: relative;
-            top: -65px;
+        .red{
+            color:#E74B3c;
         }
 
+        h2{
+            font-weight: bolder;
+            color: #3C5A99;
+            text-align: center;
+        }
+
+        h1{
+            font-weight: bolder;
+            color: #3C5A99;
+            text-align: center;
+            position: relative;
+            top: -80px;
+        }
+
+        hr{
+            color: #3C5A99;
+            width: 50%;
+            position: relative;
+            top: -90px;
+            height: 10px;
+           
+        }
         .text{
             color: #3C5A99;
-            font-weight: bolder;
-            font-size: 30px;
+            font-weight: lighter;
+            font-size: 15px;
             text-align: center;
             position: relative;
             top: -70px;
         }
-
-        .hellyes{
+        .toolbar{
             position: relative;
-            top: -40px;
+            top: -70px;
         }
-        
         .badge-img {
             position: relative;
             top: -75px;
+        }
+        
+        .img-blue-border{
+            border:3px solid #3C5A99;
+        }
+
+        .btn-blue{
+            background: #3c5a99;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-green{
+            color:white;
+            font-weight: bold;
+        }
+
+        .btn-blue:hover{
+            color:white;
+        }
+
+        .later, .hellyes{
+            width: 50%;
+        }
+        
+        .toolbar{
+            width: 96%;
+            margin: auto;
         }
         
     </style>
@@ -59,7 +102,7 @@
 
     </div>
 
-    <br />
+    <h2><span class="red">Francesco</span> pouzed you!</h2>
 
     <div class="row-fluid clearfix">
         <!-- Profile Badge -->
@@ -68,68 +111,34 @@
 
             <div class="media">
                 <img class="img-circle" src="http://placehold.it/250x250" alt=""/>
-                <img class="badge-img img-circle" src="http://placehold.it/100x100" />
+                <img class="badge-img img-circle img-blue-border" src="http://placehold.it/100x100" />
             </div>
 
         </div>
     </div>
 
-    <h2 class="name">Francesco</h2>
+    <h1 class="blue">Have a BEER!</h1>
 
     <div class="row-fluid">
         <div class="col-xs-10 col-xs-offset-1">
             
-            <p class="text">said HELL yes to your POUZ</p>
-            
-
-            <button class="btn btn-success btn-block btn-lg hellyes">
-                <img src="../img/hell-yes.svg" height="20px"/> &nbsp; That's great man!
-            </button>
+            <p class="text">A blood alchool level of 0.07 (about 2 beers) makes you better at creative problem-solving tasks</p>
             
         </div>
     </div>
-
-
-
-
-<div class="container-fluid">
-    
-
-
-    <div class="row-fluid">
-
-
         
-        <!-- Interruption Icon -->
-        <div id="interruptionIcon">
-            <img class="img-rounded" src="http://placehold.it/150x150" alt=""/>
-            <img class="img-rounded" src="http://placehold.it/50x50" alt=""/>
+    <div class="toolbar btn btn-toolbar btn-lg">
+
+        <button class="btn btn-blue btn-lg later">
         
-        </div>
-        <br />
-
-        <!-- Interruption Name -->
-        <div id="interruptionName">
-            <h3>NAME</h3>
-        </div>
-        <br />
-
-
-        <!-- Interruption Fact -->
-        <div id="interruptionFact">
-            <p>
-                Lorem Ipsum
-            </p>
-        </div>
-        <br />
+            <img src="../img/later.svg" height="20px"/> &nbsp; Later
+        
+        </button>
+            
+        <button class="btn btn-success btn-green btn-lg hellyes">
+        
+            <img src="../img/hell-yes.svg" height="20px"/> &nbsp; Hell yes!
+        
+        </button>
     
-        <!-- Interruption Controls -->
-        <div id="interruptionControls">
-            <div class="btn-group">
-                <button type="button" class="btn btn-danger">X</button>
-                <button type="button" class="btn btn-success">Interrupt</button>
-            </div>
-        </div>
     </div>
-</div>
-</body>
