@@ -15,10 +15,13 @@
 <body >
 
     <div ng-controller='PouzController'>
-        <div ng-include='"//views/" + view'></div>
+        <div ng-include='"views/" + view +".html"'></div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/fb/cdv-plugin-fb-connect.js"></script>
+    <script src="js/fb/facebook-js-sdk.js"></script>
+
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/socket.io.js"></script>
@@ -26,8 +29,12 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/pouz_app.js"></script>
     <script type="text/javascript" src="js/server.js"></script>
+    <script type="text/javascript" src="js/fb_connection.js"></script>
     <script type="text/javascript" src="js/pouz_controller.js"></script>
+    <script type="text/javascript" src="js/login_controller.js"></script>
     <script type="text/javascript">
+        alert('ready');
+        FB.init({ appId: app.fbId, nativeInterface: CDV.FB, useCachedDialogs: false });
         app.initialize();
     </script>
 

@@ -1,4 +1,7 @@
-pouzApp.controller('PouzController', ['$scope', function($scope) {
+pouzApp.controller('PouzController', ['$scope' , function($scope) {
+
+  // load facebook API
+
 
   $scope.view = 'login';
 

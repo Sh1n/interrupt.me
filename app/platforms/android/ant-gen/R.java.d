@@ -1,4 +1,4 @@
-/home/docx/Dev/interrupt.me/app/platforms/android/ant-gen/me/interrupt/R.java \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-gen/co/pouz/R.java \
  : /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_remove.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_previous_item.png \

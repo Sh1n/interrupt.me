@@ -46,7 +46,7 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/cordova_plugins.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/index.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js \
-/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/main.html \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/friends_list.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/login.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
@@ -306,9 +306,14 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/lib/angular-i18n/angular-locale_af-za.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/lib/angular-i18n/angular-locale_en-tc.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/css/index.css \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/fb_connection.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/login_controller.js \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/friends_list_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/pouz_controller.js \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/fb \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/index.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/server.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/pouz_app.js \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/fb/facebook-js-sdk.js \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/fb/cdv-plugin-fb-connect.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/AndroidManifest.xml \
