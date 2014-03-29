@@ -10,7 +10,7 @@ pouzApp.controller('LoginController', ['$scope', 'pouzServer', function($scope, 
     pouzServer.openConnection(userFbId, '');
 
     // go to main view
-    $scope.setView('main');
+    $scope.setView('friends_list');
   }
 
 }]);
