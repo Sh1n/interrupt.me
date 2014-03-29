@@ -1,4 +1,4 @@
-/home/docx/Dev/interrupt.me/app/platforms/android/ant-gen/me/interrupt/R.java \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-gen/co/pouz/R.java \
  : /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_remove.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-mdpi/ic_action_previous_item.png \
@@ -6,9 +6,15 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/res/xml/config.xml \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/ic_action_remove.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-hdpi/icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-ldpi/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-ldpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-ldpi/icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable/icon.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/values/strings.xml \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xxhdpi/ic_action_next_item.png \
@@ -16,6 +22,7 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xxhdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xhdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xhdpi/ic_action_remove.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xhdpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xhdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/res/drawable-xhdpi/icon.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-mdpi/ic_action_next_item.png \
@@ -24,15 +31,22 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/ic_action_remove.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-hdpi/icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-ldpi/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-ldpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-ldpi/icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable/facebook_icon.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable/icon.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_remove.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xhdpi/ic_action_next_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xhdpi/ic_action_remove.png \
+/home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xhdpi/close.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xhdpi/ic_action_previous_item.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/ant-build/AndroidManifest.xml \

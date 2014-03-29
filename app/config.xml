@@ -1,12 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="me.interrupt" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>InterruptMe!</name>
+<widget id="co.pouz" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap='http://gap.apache.org/ns/1.0' xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pouz!</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Get interrupted!
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="info@pouz.co" href="http://pouz.co">
+        Pouz.co Team
     </author>
     <content src="index.html" />
+
+    <feature name="org.apache.cordova.facebook.Connect">
+      <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
+    </feature>
+
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
+        <param name="APP_ID" value="750502531648621" />
+        <param name="APP_NAME" value="Pouz" />
+    </gap:plugin>
+
     <access origin="*" />
+
+   <!--  <access origin="http://pouz.co:3000" /> -->
 </widget>

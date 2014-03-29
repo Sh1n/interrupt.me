@@ -35,6 +35,34 @@ module.exports = [
         "clobbers": [
             "cordova.logger"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
+        "clobbers": [
+            "plugin.notification.local"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -42,7 +70,16 @@ module.exports.metadata =
 {
     "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.inappbrowser": "0.3.3",
-    "org.apache.cordova.console": "0.2.7"
+    "org.apache.cordova.console": "0.2.7",
+<<<<<<< HEAD
+    "com.phonegap.plugins.facebookconnect": "0.4.0"
+=======
+    "com.red_folder.phonegap.plugin.backgroundservice": "2.0.0",
+    "org.apache.cordova.vibration": "0.3.7",
+    "org.apache.cordova.dialogs": "0.2.6",
+    "org.apache.cordova.device": "0.2.8",
+    "de.appplant.cordova.plugin.local-notification": "0.7.4"
+>>>>>>> 0315353216ce9e82ae7352156b27c6e50fb7e39c
 }
 // BOTTOM OF METADATA
 });

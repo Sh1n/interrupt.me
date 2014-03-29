@@ -67,9 +67,15 @@ io.sockets.on("connection", function (socket) {
 			}, function(numOfoundClients) {
 				if (!numOfoundClients) {
 					// POST /{recipient_userid}/notifications?access_token= … &template= … &href= …
-					request.post("http://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
+					request.post("https://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
 						console.log("facebook notif: ", data);
 					});
+
+
+
+
+
+//https://graph.facebook.com/1157890924/notifications?access_token=CAAKqkZCzNTG0BADCU2eAYrAdpXGd8OZBwd05m1Rx6txZBaGah8D5QDZChABhfis4xZA4nOLKZBs3hZC9KXDcbZAXu5EtWzE7MU81Y3DvNOl7DT3omuYdrrTT8qe0WKjghHCw5ZABSbTxE8lrQoDXB87FpGLRZC8ogfggjfwcuMm2N3COyFalpDZCcpgiRO5fYtavAgZD&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co
 				}
 			});
 		}
@@ -104,10 +110,11 @@ io.sockets.on("connection", function (socket) {
 });
 
 
-
-function filterForTime(element) {
-	var nowHours = new Date().getHours();
-	return nowHours >= element.time.from && nowHours < element.time.to;
+function createFilterForTime(timeZoneOffset) {
+	var nowHours = new Date().getHours() + timeZoneOffset / 60;
+	return function filterForTime(element, nowHours) {
+		return nowHours >= element.time.from && nowHours < element.time.to;
+	};
 }
 
 function randomInterruption(elements) {
@@ -118,7 +125,11 @@ setInterval(function() {
 	for (var prop in sockets) {
 		var socketArr = sockets[prop];
 
-		var filteredLabels = interruptionLabels.filter(filterForTime);
+		if (socketArr.length < 1) {
+			continue;
+		}
+
+		var filteredLabels = interruptionLabels.filter(createFilterForTime(socketArr[0].timeZoneOffset));
 
 		var label = randomInterruption(filteredLabels);
 
