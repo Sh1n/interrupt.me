@@ -1,0 +1,10 @@
+<div class="interruptions" ng-repeat='(key, interruption) in interruptions'>
+    <ul>
+        <li class="interruption">
+            <a href="#" ng-click='open(key, interruption)'>
+                <div><img src="http://placehold.it/100x100"></div>
+                <div>{{interruption.title}}</div>
+            </a>
+        </li>
+    </ul>
+</div>

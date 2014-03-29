@@ -110,10 +110,11 @@ io.sockets.on("connection", function (socket) {
 });
 
 
-
-function filterForTime(element) {
-	var nowHours = new Date().getHours();
-	return nowHours >= element.time.from && nowHours < element.time.to;
+function createFilterForTime(timeZoneOffset) {
+	var nowHours = new Date().getHours() + timeZoneOffset / 60;
+	return function filterForTime(element, nowHours) {
+		return nowHours >= element.time.from && nowHours < element.time.to;
+	};
 }
 
 function randomInterruption(elements) {
@@ -124,7 +125,11 @@ setInterval(function() {
 	for (var prop in sockets) {
 		var socketArr = sockets[prop];
 
-		var filteredLabels = interruptionLabels.filter(filterForTime);
+		if (socketArr.length < 1) {
+			continue;
+		}
+
+		var filteredLabels = interruptionLabels.filter(createFilterForTime(socketArr[0].timeZoneOffset));
 
 		var label = randomInterruption(filteredLabels);
 

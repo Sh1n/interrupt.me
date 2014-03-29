@@ -16,10 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var DEBUG = true;
+
 var app = {
+
+    fbId: '750502531648621',
+
     // Application Constructor
     initialize: function() {
+
         this.bindEvents();
+        //alert('init');
     },
     // Bind Event Listeners
     //
@@ -34,16 +42,68 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        //alert('ready');
+
+        DEBUG && alert('on device ready start');
+        document.addEventListener("pause", onPause, false);
+        document.addEventListener("resume", onResume, false);
+
+        DEBUG && alert('on device ready after listeners');
+
+        window.plugin.notification.local.onclick = function(json)
+        {
+            console.log("notification click event -- " + id);
+            console.log(json);
+
+            // go and display the interruptions
+        }
+
+        DEBUG && alert('on device ready after notification');
+
+
+        try {
+            FB.init({
+                appId: app.fbId,
+                nativeInterface: CDV.FB,
+                useCachedDialogs: false
+            });
+        } catch (e) {
+            alert(e);
+        }
+
+        DEBUG && alert('on device ready done');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        // console.log('Received Event: ' + id);
     }
 };
+
+var APP_IS_ACTIVE = true;
+
+
+
+
+function onPause()
+{
+	APP_IS_ACTIVE = false;
+}
+
+
+function onResume()
+{
+	APP_IS_ACTIVE = true;
+}
+
+
+
+
