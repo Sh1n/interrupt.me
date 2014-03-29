@@ -1,4 +1,4 @@
-pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer' , function($scope, FBConnection, pouzServer) {
+pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'notifications' , function($scope, FBConnection, pouzServer, notifications) {
 
   // load facebook API
 
@@ -13,6 +13,8 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer' , f
   $scope.successfully_logged_in = function(first_login) {
       // open connection with server
       pouzServer.openConnection(FBConnection.user_id(), FBConnection.user_token());
+
+      pouzServer.registerInterruptionCallback(notifications.notify);
 
       DEBUG && alert('logged in');
 

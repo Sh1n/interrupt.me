@@ -19,4 +19,6 @@
     </gap:plugin>
 
     <access origin="*" />
+
+   <!--  <access origin="http://pouz.co:3000" /> -->
 </widget>

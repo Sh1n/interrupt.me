@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var DEBUG = false;
 
 var app = {
@@ -44,6 +45,19 @@ var app = {
 
         //alert('ready');
 
+
+        document.addEventListener("pause", onPause, false);
+        document.addEventListener("resume", onResume, false);
+
+
+        window.plugin.notification.local.onclick = function (json)
+        {
+            console.log("notification click event -- " + id);
+            console.log(json);
+
+            // go and display the interruptions
+        }
+
         try {
             FB.init({
                 appId: app.fbId,
@@ -66,3 +80,23 @@ var app = {
         // console.log('Received Event: ' + id);
     }
 };
+
+var APP_IS_ACTIVE = true;
+
+
+
+
+function onPause()
+{
+	APP_IS_ACTIVE = false;
+}
+
+
+function onResume()
+{
+	APP_IS_ACTIVE = true;
+}
+
+
+
+

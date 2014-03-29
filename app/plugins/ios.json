@@ -25,6 +25,9 @@
             },
             "Security.framework": {
                 "true": 1
+                },
+            "AudioToolbox.framework": {
+                "true": 2
             }
         },
         "config.xml": {
@@ -48,7 +51,12 @@
                 "<string>Pouz</string>": 1
             },
             "CFBundleURLTypes": {
-                "<array><dict><key>CFBundleURLSchemes</key><array><string>fb750502531648621</string></array></dict></array>": 1
+                "<array><dict><key>CFBundleURLSchemes</key><array><string>fb750502531648621</string></array></dict></array>": 1,
+                "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>": 1,
+                "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>": 1,
+                "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>": 1,
+                "<feature name=\"LocalNotification\"><param name=\"ios-package\" onload=\"true\" value=\"APPLocalNotification\" /><param name=\"onload\" value=\"true\" /></feature>": 1
+
             }
         }
     },
@@ -66,6 +74,21 @@
             "APP_ID": "750502531648621",
             "APP_NAME": "Pouz",
             "PACKAGE_NAME": "me.interrupt"
+            },
+        "com.red_folder.phonegap.plugin.backgroundservice": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "co.pouz"
         }
     },
     "dependent_plugins": {}

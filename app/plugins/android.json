@@ -7,12 +7,27 @@
         "res/xml/config.xml": {
             "/*": {
                 "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>": 1,
-                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 1
+                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 1,
+                "<feature name=\"BackgroundServicePlugin\"><param name=\"android-package\" value=\"com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin\" /></feature>": 1,
+                "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>": 1,
+                "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>": 1,
+                "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>": 1,
+                "<feature name=\"LocalNotification\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.localnotification.LocalNotification\" /></feature>": 1
             }
         },
         "AndroidManifest.xml": {
             "/*": {
                 "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />": 1
+            },
+            "/manifest": {
+                "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />": 2,
+                "<uses-permission android:name=\"android.permission.VIBRATE\" />": 1
+            },
+            "/manifest/application": {
+                "<receiver android:name=\"com.red_folder.phonegap.plugin.backgroundservice.BootReceiver\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /></intent-filter></receiver>": 1,
+                "<receiver android:name=\"de.appplant.cordova.plugin.localnotification.Receiver\" />": 1,
+                "<receiver android:name=\"de.appplant.cordova.plugin.localnotification.Restore\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /></intent-filter></receiver>": 1,
+                "<activity android:launchMode=\"singleInstance\" android:name=\"de.appplant.cordova.plugin.localnotification.ReceiverActivity\" />": 1
             }
         },
         "config.xml": {
@@ -36,9 +51,24 @@
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "me.interrupt"
         },
+
         "com.phonegap.plugins.facebookconnect": {
             "APP_ID": "750502531648621",
             "APP_NAME": "Pouz",
+            },
+        "com.red_folder.phonegap.plugin.backgroundservice": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "co.pouz"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "co.pouz"
         }
     },

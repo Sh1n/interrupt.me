@@ -6,13 +6,18 @@
 <meta charset="utf-8" />
 <meta name="format-detection" content="telephone=no" />
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <title>Interrupt me!</title>
 
 </head>
 
 <body >
+
+    <div id="resultMessage">None yet</div>
 
     <div ng-controller='PouzController'>
         <div ng-include='"views/" + view +".html"'></div>
@@ -22,7 +27,6 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/fb/cdv-plugin-fb-connect.js"></script>
-    <script src="js/fb/facebook-js-sdk.js"></script>
 
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
@@ -44,6 +48,8 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+
+    <div id='fb-root'></div>
 
 </body>
 </html>
