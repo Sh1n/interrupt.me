@@ -1,14 +1,38 @@
 <div ng-controller='PouzReceivedController'>
 
-  <h1>You have been interrupted</h1>
+<div class="container-fluid">
+    <div class="row-fluid">
 
-  <h2>From: {{view_params.senderFbId}}</h2>
+        <!-- Interruption Icon -->
+        <div id="interruptionIcon">
+            <img class="img-rounded" src="{{interruption.picture}}" alt=""/>
+        </div>
+        <br />
 
-  <img src='{{interruption.picture}}' />
-  <h2>{{interruption.title}}</h2>
-  <p>{{interruption.description}}</p>
+        <!-- Interruption Name -->
+        <div id="interruptionName">
+            <h3>{{interruption.title}}</h3>
+        </div>
+        <br />
 
-  <button ng-click='accept()'>Hell yeah</button>
-  <button ng-click='postpone()'>Postpone</button>
+
+        <!-- Interruption Fact -->
+        <div id="interruptionFact">
+            <p>
+                {{interruption.description}}
+            </p>
+        </div>
+        <br />
+
+        <!-- Interruption Controls -->
+        <div id="interruptionControls">
+            <div class="btn-group">
+                <button type="button"  ng-click='accept()' class="btn btn-danger">Maybe Later</button>
+                <button type="button"  ng-click='postpone()' class="btn btn-success">Fuck Yeah</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </div>

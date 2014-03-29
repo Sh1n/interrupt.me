@@ -1,12 +1,31 @@
 <div ng-controller='FriendsListController'>
-  <h1>Interrupt your friend</h1>
 
-  <div ng-show='friends == null'>Friends are loading</div>
+<div class="row-fluid clearfix" id="header">
+  <div class="col-xs-3">
+  </div>
 
-  <ul>
-    <li ng-repeat='friend in friends'>
-      <img src='{{friend.picture.data.url}}' />
-      <button ng-click='interrupt(friend)'>Pouze {{friend.name}}</button>
-    </li>
-  </ul>
+  <div class="col-xs-6 col-xs">
+    <img src="img/logo-pouz.svg" alt="Pouz" style="margin-top: 10px;"/>
+  </div>
+</div>
+
+
+  <div class="row-fluid">
+    <div class="col-md-12 text-center">
+      <h1>Pouz your friends</h1>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="col-md-12 friendlist">
+      <div class='row-fluid friend clearfix'  ng-repeat='friend in friends'>
+        <div  ng-click='interrupt(friend)'>
+          <div class='col-xs-3 pic text-center'><img class="img-circle" src="{{friend.picture.data.url}}" alt=""/></div>
+          <div class='col-xs-9 name'><span> {{friend.name}}</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
