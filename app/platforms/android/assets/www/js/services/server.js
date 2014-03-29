@@ -19,15 +19,31 @@ pouzApp.service('pouzServer', ['serverUrl', function(serverUrl) {
       socket.emit("token", {fbId: fbId, accessToken: accessToken})
       socket.on('interruption', onInterruption);
 
+      socket.on('connection', function() {
+        alert('connected');
+      })
+
+      //TODO handle reaction
+
       DEBUG && alert('connected to socket');
+      console.log('connected to socket');
     },
 
     interrupt: function(fbId, label) {
+      console.log('interruption sent', fbId, label);
       socket.emit("interrupt", {label: label, fbId: fbId});
     },
 
     registerInterruptionCallback: function(callback) {
       callbacks.push(callback);
+    },
+
+    sendReaction: function(interruption, reaction) {
+      socket.emit('reaction', {
+        label: interruption.label,
+        senderFbId: interruption.senderFbId,
+        reaction: (reaction ? 'ok' : 'fuck')
+      });
     }
 
   };

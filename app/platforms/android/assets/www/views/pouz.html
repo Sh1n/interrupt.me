@@ -1,0 +1,14 @@
+<div ng-controller='PouzReceivedController'>
+
+  <h1>You have been interrupted</h1>
+
+  <h2>From: {{view_params.senderFbId}}</h2>
+
+  <img src='{{interruption.picture}}' />
+  <h2>{{interruption.title}}</h2>
+  <p>{{interruption.description}}</p>
+
+  <button ng-click='accept()'>Hell yeah</button>
+  <button ng-click='postpone()'>Postpone</button>
+
+</div>

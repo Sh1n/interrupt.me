@@ -5,8 +5,8 @@
 
   <ul>
     <li ng-repeat='friend in friends'>
-      <img src='{{friend.picture}}' />
-      <button ng-click='interrupt(friend)'>{{friend.name}}</button>
+      <img src='{{friend.picture.data.url}}' />
+      <button ng-click='interrupt(friend)'>Pouze {{friend.name}}</button>
     </li>
   </ul>
 </div>

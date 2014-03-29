@@ -17,13 +17,11 @@
 
 <body >
 
-    <div id="resultMessage">None yet</div>
 
     <div ng-controller='PouzController'>
         <div ng-include='"views/" + view +".html"'></div>
     </div>
 
-    <script src="http://debug.phonegap.com/target/target-script-min.js#pouz"></script>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/fb/cdv-plugin-fb-connect.js"></script>
@@ -37,12 +35,14 @@
     <script type="text/javascript" src="js/services/server.js"></script>
     <script type="text/javascript" src="js/services/fb_connection.js"></script>
     <script type="text/javascript" src="js/services/pouzes.js"></script>
+    <script type="text/javascript" src="js/services/notifications.js"></script>
 
     <script type="text/javascript" src="js/controllers/pouz_controller.js"></script>
     <script type="text/javascript" src="js/controllers/login_controller.js"></script>
     <script type="text/javascript" src="js/controllers/friends_list_controller.js"></script>
     <script type="text/javascript" src="js/controllers/interruption_controller.js"></script>
     <script type="text/javascript" src="js/controllers/sent_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/pouz_received_controller.js"></script>
 
 
     <script type="text/javascript">

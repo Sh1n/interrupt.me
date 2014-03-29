@@ -66,6 +66,7 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/login.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/pouzes.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/interruption_sent.html \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/pouz.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/interruption.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/img/logo.png \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/lib/angular.min.js \
@@ -331,6 +332,7 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/login_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/friends_list_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/pouz_controller.js \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/pouz_received_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/sent_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/controllers/interruption_controller.js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js/fb/facebook-js-sdk.js \

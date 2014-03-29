@@ -64,10 +64,17 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
   }
 
   if (window.cordova || window.PhoneGap || window.phonegap) {
+    DEBUG && alert('loading PhoneGap libs');
+
     jQuery.getScript('js/fb/facebook-js-sdk.js', function() {
+      DEBUG && alert('PhoneGap is loaded');
+
       document.addEventListener('deviceready', function() {
         ready();
       }, false);
+    })
+    .fail(function(xhr, settings, exception) {
+      DEBUG && alert('js failed to load ' + exception);
     });
 
   } else {

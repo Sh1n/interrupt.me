@@ -17,7 +17,7 @@
  * under the License.
  */
 
-var DEBUG = false;
+var DEBUG = true;
 
 var app = {
 
@@ -45,10 +45,11 @@ var app = {
 
         //alert('ready');
 
-
+        DEBUG && alert('on device ready start');
         document.addEventListener("pause", onPause, false);
         document.addEventListener("resume", onResume, false);
 
+        DEBUG && alert('on device ready after listeners');
 
         window.plugin.notification.local.onclick = function (json)
         {
@@ -57,6 +58,9 @@ var app = {
 
             // go and display the interruptions
         }
+
+        DEBUG && alert('on device ready after notification');
+
 
         try {
             FB.init({
@@ -67,6 +71,9 @@ var app = {
         } catch (e) {
             alert(e);
         }
+
+        DEBUG && alert('on device ready done');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -79,6 +86,7 @@ var app = {
 
         // console.log('Received Event: ' + id);
     }
+};
 
 var APP_IS_ACTIVE = true;
 

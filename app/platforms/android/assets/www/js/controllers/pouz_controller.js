@@ -4,17 +4,38 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
 
   $scope.view = 'splash';
 
+  $scope.safeApply = function(fn) {
+    var phase = this.$root.$$phase;
+    if(phase == '$apply' || phase == '$digest') {
+      if(fn && (typeof(fn) === 'function')) {
+        fn();
+      }
+    } else {
+      this.$apply(fn);
+    }
+  };
+
   $scope.setView = function(view, view_params) {
-    $scope.view = view;
-    $scope.view_params = view_params;
-    $scope.$apply();
+    $scope.safeApply(function() {
+      $scope.view = view;
+      $scope.view_params = view_params;
+    })
   }
+
+  var show_notification = function(data) {
+    console.log('interruption received', data);
+    $scope.setView('pouz', data);
+  };
 
   $scope.successfully_logged_in = function(first_login) {
       // open connection with server
       pouzServer.openConnection(FBConnection.user_id(), FBConnection.user_token());
 
+      // notify background service
       pouzServer.registerInterruptionCallback(notifications.notify);
+
+      // show interruption in app
+      pouzServer.registerInterruptionCallback(show_notification);
 
       DEBUG && alert('logged in');
 
@@ -23,7 +44,7 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       //   //TODO
       //   $scope.setView('friends_list');
       // } else {
-        $scope.setView('friends_list');
+      $scope.setView('friends_list');
       //}
   };
 
@@ -35,16 +56,25 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       if (success) {
         DEBUG && alert('already logged in');
         $scope.successfully_logged_in(false);
+      } else {
+        $scope.setView('login');
       }
     })
 
   }
 
   if (window.cordova || window.PhoneGap || window.phonegap) {
+    DEBUG && alert('loading PhoneGap libs');
+
     jQuery.getScript('js/fb/facebook-js-sdk.js', function() {
+      DEBUG && alert('PhoneGap is loaded');
+
       document.addEventListener('deviceready', function() {
         ready();
       }, false);
+    })
+    .fail(function(xhr, settings, exception) {
+      DEBUG && alert('js failed to load ' + exception);
     });
 
   } else {
