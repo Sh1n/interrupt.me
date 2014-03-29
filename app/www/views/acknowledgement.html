@@ -5,21 +5,47 @@
 </head>
 
     <style>
+        
         #header{
             height: 70px;
             background: #E74B3c;
             line-height: 70px;
         }
+
         a{
             color: white;
             font-weight: lighter;
             font-size: 15px;
         }
+
         .name{
             font-weight: bold;
-            font-size: 38px;
-            color:#E74B3c;
+            font-size: 48px;
+            color: #E74B3c;
+            text-align: center;
+            position: relative;
+            top: -60px;
         }
+
+        .text{
+            color: #3C5A99;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            top: -60px;
+        }
+
+        .hellyes{
+            position: relative;
+            top: -40px;
+        }
+        
+        .badge-img {
+            position: relative;
+            top: -75px;
+        }
+        
     </style>
 
     <div class="row-fluid clearfix" id="header">
@@ -33,23 +59,33 @@
         </div>
 
     </div>
-    
-    <br />
 
+    <br />
+    
     <div class="row-fluid clearfix">
         <!-- Profile Badge -->
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <img class="img-circle" src="http://placehold.it/250x250" alt=""/>
+
+            <div class="media">
+                <img class="img-circle" src="http://placehold.it/250x250" alt=""/>
+                <img class="badge-img img-circle" src="http://placehold.it/100x100" />
+            </div>
+
         </div>
     </div>
 
-        <!-- Acknowledgement Fact -->
-    <div class="pagination pagination-center" >
-        <h2 class="name">Francesco</h2>
-        <p>said HELL yes to your POUZ</p>
-    </div>
-    
-        
+    <h2 class="name">Francesco</h2>
 
-</body>
+    <div class="row-fluid">
+        <div class="col-xs-10 col-xs-offset-1">
+            
+            <p class="text">said HELL yes to your POUZ</p>
+            
+
+            <button class="btn btn-success btn-block btn-lg hellyes">
+                <img src="../img/hell-yes.svg" height="20px"/> &nbsp; That's great man!
+            </button>
+            
+        </div>
+    </div>
