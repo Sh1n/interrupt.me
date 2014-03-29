@@ -70,6 +70,12 @@ io.sockets.on("connection", function (socket) {
 					request.post("http://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
 						console.log("facebook notif: ", data);
 					});
+
+
+
+
+
+//https://graph.facebook.com/1157890924/notifications?access_token=CAAKqkZCzNTG0BADCU2eAYrAdpXGd8OZBwd05m1Rx6txZBaGah8D5QDZChABhfis4xZA4nOLKZBs3hZC9KXDcbZAXu5EtWzE7MU81Y3DvNOl7DT3omuYdrrTT8qe0WKjghHCw5ZABSbTxE8lrQoDXB87FpGLRZC8ogfggjfwcuMm2N3COyFalpDZCcpgiRO5fYtavAgZD&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co
 				}
 			});
 		}
