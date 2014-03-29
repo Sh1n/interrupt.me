@@ -1,0 +1,25 @@
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes.dex : \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/BuildConfig.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/InterruptMe.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/R$attr.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/R$drawable.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/R$string.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/R$xml.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/me/interrupt/R.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager$1.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager.class \
+/Users/andreifiroiu/Desktop/devel/interruption/platforms/android/ant-build/dexedLibs/classes-8408fb307b8ac20530d269e233ef9223.jar \
