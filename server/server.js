@@ -31,7 +31,7 @@ function sendMessage(fbId, messageName, messageObject, next) {
 	var socketArr = sockets[fbId];
 
 	if (!socketArr) {
-		console.error("sendMessage -- connection with that fbId not found.");
+		console.error("sendMessage -- connection with that fbId not found.", fbId);
 		return;
 	}
 
@@ -66,9 +66,9 @@ io.sockets.on("connection", function (socket) {
 				"senderFbId": socket.fbId
 			}, function(numOfoundClients) {
 				if (!numOfoundClients) {
-					request.post("http://graph.facebook.com/", function(data) {
-						console.log("facebook notif: ", data);
-					});
+					//request.post("http://graph.facebook.com/", function(data) {
+					//	console.log("facebook notif: ", data);
+					//});
 				}
 			});
 		}
