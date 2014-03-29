@@ -12,6 +12,6 @@
     <feature name="org.apache.cordova.facebook.Connect">
       <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
     </feature>
-
-    <access origin="*" />
+    
+    <access origin="http://pouz.co:3000" />
 </widget>
