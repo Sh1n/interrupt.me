@@ -47,7 +47,9 @@
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/index.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/js \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/friends_list.html \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/confirm.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/login.html \
+/home/docx/Dev/interrupt.me/app/platforms/android/assets/www/views/pouzes.html \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
 /home/docx/Dev/interrupt.me/app/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www \

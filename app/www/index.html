@@ -34,8 +34,10 @@
     <script type="text/javascript" src="js/login_controller.js"></script>
     <script type="text/javascript">
         alert('ready');
+        CDV.FB.init({ appId: app.fbId, nativeInterface: CDV.FB, useCachedDialogs: false });
         FB.init({ appId: app.fbId, nativeInterface: CDV.FB, useCachedDialogs: false });
         app.initialize();
+        alert('initialized');
     </script>
 
 </body>
