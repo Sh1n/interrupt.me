@@ -67,7 +67,7 @@ io.sockets.on("connection", function (socket) {
 			}, function(numOfoundClients) {
 				if (!numOfoundClients) {
 					// POST /{recipient_userid}/notifications?access_token= … &template= … &href= …
-					request.post("http://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
+					request.post("https://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
 						console.log("facebook notif: ", data);
 					});
 
