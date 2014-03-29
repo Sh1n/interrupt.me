@@ -33,7 +33,7 @@ function sendToken() {
 	socket.emit("token", {fbId: fakeFbId, timeZoneOffset: new Date().getTimezoneOffset()});
 }
 
-var socket = io.connect('http://pouz.aws.af.cm');
+var socket = io.connect('http://pouz.co:3000');
 
 var fakeFbId = Math.random();
 

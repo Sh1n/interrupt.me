@@ -104,9 +104,12 @@ setInterval(function() {
 		var filteredLabels = interruptionLabels.filter(filterForTime);
 
 		var label = randomInterruption(filteredLabels);
-		for (var i = socketArr.length - 1; i >= 0; i--) {
-			socketArr[i].emit("interruption", {label: label.label});
+
+		if (label) {
+			for (var i = socketArr.length - 1; i >= 0; i--) {
+				socketArr[i].emit("interruption", {"label": label.label});
+			}
 		}
 	}
-}, 1000 * 60);
+}, 1000 * 60 * 60);
 
