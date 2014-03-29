@@ -29,6 +29,11 @@ var interruptionLabels = [
 function sendMessage(fbId, messageName, messageObject) {
 	var socketArr = sockets[fbId];
 
+	if (!socketArr) {
+		console.error("sendMessage -- connection with that fbId not found.");
+		return;
+	}
+
 	for (var i = socketArr.length - 1; i >= 0; i--) {
 		socketArr[i].emit(messageName, messageObject);
 	}
@@ -100,7 +105,7 @@ setInterval(function() {
 
 		var label = randomInterruption(filteredLabels);
 		for (var i = socketArr.length - 1; i >= 0; i--) {
-			socketArr[i].emit("interruption", label.label);
+			socketArr[i].emit("interruption", {label: label.label});
 		}
 	}
 }, 1000 * 60);
