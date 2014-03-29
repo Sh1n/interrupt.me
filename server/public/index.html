@@ -1,6 +1,9 @@
 <script src="socket.io.js"></script>
 <script>
 var interruptions = {
+	"lunch": {
+
+	},
 	"beer": {
 		"title": "Drink a beer",
 		"description": "It's healthy and fun!",
@@ -17,8 +20,17 @@ function interrupt(label, fbId) {
 	socket.emit("interrupt", {label: label, fbId: fbId});
 }
 
+function react(label, reaction, fbId, senderFbId) {
+	socket.emit("react", {
+		label: label,
+		reaction: reaction,
+		fbId: fbId,
+		senderFbId: senderFbId
+	});
+}
+
 function sendToken() {
-	socket.emit("token", {fbId: fakeFbId})
+	socket.emit("token", {fbId: fakeFbId, timeZoneOffset: new Date().getTimezoneOffset()});
 }
 
 var socket = io.connect('http://localhost:3000');
@@ -26,6 +38,10 @@ var socket = io.connect('http://localhost:3000');
 var fakeFbId = Math.random();
 
 socket.on("interruption", function(data) {
+	console.log(data);
+});
+
+socket.on("reaction", function(data) {
 	console.log(data);
 });
 
