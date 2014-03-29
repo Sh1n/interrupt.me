@@ -18,9 +18,10 @@
         <div ng-include='"views/" + view +".html"'></div>
     </div>
 
+    <script src="http://debug.phonegap.com/target/target-script-min.js#pouz"></script>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/fb/cdv-plugin-fb-connect.js"></script>
-    <script src="js/fb/facebook-js-sdk.js"></script>
 
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
@@ -28,17 +29,22 @@
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/pouz_app.js"></script>
-    <script type="text/javascript" src="js/server.js"></script>
-    <script type="text/javascript" src="js/fb_connection.js"></script>
-    <script type="text/javascript" src="js/pouz_controller.js"></script>
-    <script type="text/javascript" src="js/login_controller.js"></script>
+    <script type="text/javascript" src="js/services/server.js"></script>
+    <script type="text/javascript" src="js/services/fb_connection.js"></script>
+    <script type="text/javascript" src="js/services/pouzes.js"></script>
+
+    <script type="text/javascript" src="js/controllers/pouz_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/login_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/friends_list_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/interruption_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/sent_controller.js"></script>
+
+
     <script type="text/javascript">
-        alert('ready');
-        CDV.FB.init({ appId: app.fbId, nativeInterface: CDV.FB, useCachedDialogs: false });
-        FB.init({ appId: app.fbId, nativeInterface: CDV.FB, useCachedDialogs: false });
         app.initialize();
-        alert('initialized');
     </script>
+
+    <div id='fb-root'></div>
 
 </body>
 </html>

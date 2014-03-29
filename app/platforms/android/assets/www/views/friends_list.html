@@ -1,3 +1,12 @@
 <div ng-controller='FriendsListController'>
-  <h1>Main view</h1>
+  <h1>Interrupt your friend</h1>
+
+  <div ng-show='friends == null'>Friends are loading</div>
+
+  <ul>
+    <li ng-repeat='friend in friends'>
+      <img src='{{friend.picture}}' />
+      <button ng-click='interrupt(friend)'>{{friend.name}}</button>
+    </li>
+  </ul>
 </div>

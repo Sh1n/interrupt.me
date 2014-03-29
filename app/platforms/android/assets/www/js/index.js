@@ -16,12 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var DEBUG = true;
+
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
-
         app.fbId = '750502531648621';
+
+        this.bindEvents();
+        //alert('init');
     },
     // Bind Event Listeners
     //
@@ -37,16 +40,27 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+        //alert('ready');
+
+        try {
+            FB.init({
+                appId: app.fbId,
+                nativeInterface: CDV.FB,
+                useCachedDialogs: false
+            });
+        } catch (e) {
+            alert(e);
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        // console.log('Received Event: ' + id);
     }
 };

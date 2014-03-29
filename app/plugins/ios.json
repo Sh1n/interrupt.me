@@ -10,13 +10,45 @@
             },
             "CoreGraphics.framework": {
                 "false": 1
+            },
+            "libsqlite3.dylib": {
+                "false": 1
+            },
+            "Social.framework": {
+                "true": 1
+            },
+            "Accounts.framework": {
+                "true": 1
+            },
+            "AdSupport.framework": {
+                "true": 1
+            },
+            "Security.framework": {
+                "true": 1
             }
         },
         "config.xml": {
             "/*": {
                 "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>": 1,
                 "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>": 1,
-                "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>": 1
+                "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>": 1,
+                "<access origin=\"https://m.facebook.com\" />": 1,
+                "<access origin=\"https://graph.facebook.com\" />": 1,
+                "<access origin=\"https://api.facebook.com\" />": 1,
+                "<access origin=\"https://*.fbcdn.net\" />": 1,
+                "<access origin=\"https://*.akamaihd.net\" />": 1,
+                "<feature name=\"org.apache.cordova.facebook.Connect\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /></feature>": 1
+            }
+        },
+        "*-Info.plist": {
+            "FacebookAppID": {
+                "<string>750502531648621</string>": 1
+            },
+            "FacebookDisplayName": {
+                "<string>Pouz</string>": 1
+            },
+            "CFBundleURLTypes": {
+                "<array><dict><key>CFBundleURLSchemes</key><array><string>fb750502531648621</string></array></dict></array>": 1
             }
         }
     },
@@ -28,6 +60,11 @@
             "PACKAGE_NAME": "me.interrupt"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "me.interrupt"
+        },
+        "com.phonegap.plugins.facebookconnect": {
+            "APP_ID": "750502531648621",
+            "APP_NAME": "Pouz",
             "PACKAGE_NAME": "me.interrupt"
         }
     },

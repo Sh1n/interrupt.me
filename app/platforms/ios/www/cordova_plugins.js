@@ -42,7 +42,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.network-information": "0.2.7",
     "org.apache.cordova.inappbrowser": "0.3.3",
-    "org.apache.cordova.console": "0.2.7"
+    "org.apache.cordova.console": "0.2.7",
+    "com.phonegap.plugins.facebookconnect": "0.4.0"
 }
 // BOTTOM OF METADATA
 });
