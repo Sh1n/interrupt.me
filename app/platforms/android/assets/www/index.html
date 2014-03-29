@@ -15,7 +15,7 @@
 <body >
 
     <div ng-controller='PouzController'>
-        <div ng-include='"//views/" + view'></div>
+        <div ng-include='"views/" + view +".html"'></div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/pouz_app.js"></script>
     <script type="text/javascript" src="js/server.js"></script>
     <script type="text/javascript" src="js/pouz_controller.js"></script>
+    <script type="text/javascript" src="js/login_controller.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>

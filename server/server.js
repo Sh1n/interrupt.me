@@ -1,4 +1,5 @@
-var io = require("socket.io").listen(3000);
+var io = require("socket.io").listen(3000),
+	request = require("request");
 
 var sockets = {};
 
@@ -26,40 +27,56 @@ var interruptionLabels = [
 	}
 ];
 
-function sendMessage(fbId, messageName, messageObject) {
+function sendMessage(fbId, messageName, messageObject, next) {
 	var socketArr = sockets[fbId];
 
 	if (!socketArr) {
-		console.error("sendMessage -- connection with that fbId not found.");
+		console.error("sendMessage -- connection with that fbId not found.", fbId);
 		return;
 	}
 
 	for (var i = socketArr.length - 1; i >= 0; i--) {
 		socketArr[i].emit(messageName, messageObject);
 	}
+
+	if (typeof next === "function") {
+		next(socketArr.length);
+	}
 }
 
 
 io.sockets.on("connection", function (socket) {
 	socket.on("token", function(data) {
+		console.log("token: ", data);
 		if (data.fbId) {
 			socket.fbId = data.fbId;
 			socket.timeZoneOffset = data.timeZoneOffset;
+			socket.accessToken = data.accessToken;
+
 			sockets[data.fbId] = sockets[data.fbId] || [];
 			sockets[data.fbId].push(socket);
 		}
 	});
 
 	socket.on("interrupt", function (data) {
+		console.log("interrupt: ", data);
 		if (data.fbId && data.label) {
 			sendMessage(data.fbId, "interruption", {
 				"label": data.label,
 				"senderFbId": socket.fbId
+			}, function(numOfoundClients) {
+				if (!numOfoundClients) {
+					// POST /{recipient_userid}/notifications?access_token= … &template= … &href= …
+					request.post("http://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
+						console.log("facebook notif: ", data);
+					});
+				}
 			});
 		}
 	});
 
 	socket.on("react", function(data) {
+		console.log("react: ", data);
 		if (data.fbId && data.senderFbId && data.reaction && data.label) {
 			sendMessage(data.senderFbId, "reaction", {
 				"label": data.label,
@@ -70,6 +87,7 @@ io.sockets.on("connection", function (socket) {
 	});
 
 	socket.on("disconnect", function() {
+		console.log("disconnect...");
 		var socketArr = sockets[socket.fbId];
 
 		if (!socketArr) {
@@ -97,7 +115,6 @@ function randomInterruption(elements) {
 }
 
 setInterval(function() {
-
 	for (var prop in sockets) {
 		var socketArr = sockets[prop];
 
