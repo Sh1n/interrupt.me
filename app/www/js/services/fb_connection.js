@@ -15,7 +15,7 @@ pouzApp.service('FBConnection', [ '$http', function( $http) {
           fb_conn.try_login(successful);
         });
 
-      }, {scope: 'email'});
+      }, {scope: 'email,manage_notifications'});
 
     },
 

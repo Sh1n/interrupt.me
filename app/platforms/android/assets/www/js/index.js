@@ -51,7 +51,7 @@ var app = {
 
         DEBUG && alert('on device ready after listeners');
 
-        window.plugin.notification.local.onclick = function (json)
+        window.plugin.notification.local.onclick = function(json)
         {
             console.log("notification click event -- " + id);
             console.log(json);
