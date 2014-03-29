@@ -13,58 +13,37 @@
     #main{
         margin-top: 45%;
     }
+
     .logo{
         width: 95%;
     }
 
-    .tagline{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        color:white;
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .btn-pouzblue{
-        background: #3c5a99;
-        box-shadow: 
-    }
-
-    .btn-facebook{
-        background: #3c5a99;
+    h1{
         color: white;
-        font-weight: bold;
-    }
-    
-    .fa-facebook{
-        margin-right: 20px;
-    }
+        font-weight: bolder;
+        text-align: center;
+    }    
+
 </style>
 <body>
-    <div id="main" class="container-fluid" ng-controller='LoginController'>
+    <div id="main" class="container-fluid">
         
         <div class="row-fluid">
             <div class="col-xs-12">
-                <img src="../img/logo-pouz.svg" alt="Pouz" class="logo" />
-            </div>
-        </div>
+                <img src="../img/paper-plane.svg" alt="Pouz" class="logo" />
                 
+                <br />
+                
+                <h1>POUZ SENT!</h1>
+                
+                <br/><br />
+                <button class="btn btn-lg btn-block btn-success">
+                    <img src="../img/thats-great.svg" height="20px"/> &nbsp; That's great man!
             
-        <div class="row-fluid">
-            <div class="col-xs-1"></div>
+                </button>
 
-            <div class="col-xs-10">
-                
-                <p class="tagline">Sometimes is good to have a break</p>
             </div>
-
-            <div class="col-xs-1"></div>
         </div>
-        
-        <input ng-model='fbid' class="hide"/>
-        <button class="fa-2x btn btn-lg btn-block btn-facebook" ng-click='login()'>
-            <i class="fa  fa-facebook"></i> Login
-        </button>
-        
+                
     </div>
 </body>
