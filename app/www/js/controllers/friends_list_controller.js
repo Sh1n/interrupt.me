@@ -4,9 +4,10 @@ pouzApp.controller('FriendsListController', ['$scope', 'FBConnection', 'pouzServ
 
   var loadFacebookFriends = function() {
     FBConnection.get_friends_list(function(response) {
-       DEBUG && alert('friends loaded ');
-       $scope.friends = response.data;
-       $scope.$apply();
+       $scope.safeApply(function() {
+         DEBUG && alert('friends loaded ');
+         $scope.friends = response.data;
+       });
     });
   };
 

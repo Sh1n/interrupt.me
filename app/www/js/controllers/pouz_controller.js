@@ -4,13 +4,26 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
 
   $scope.view = 'splash';
 
+  $scope.safeApply = function(fn) {
+    var phase = this.$root.$$phase;
+    if(phase == '$apply' || phase == '$digest') {
+      if(fn && (typeof(fn) === 'function')) {
+        fn();
+      }
+    } else {
+      this.$apply(fn);
+    }
+  };
+
   $scope.setView = function(view, view_params) {
-    $scope.view = view;
-    $scope.view_params = view_params;
-    $scope.$apply();
+    $scope.safeApply(function() {
+      $scope.view = view;
+      $scope.view_params = view_params;
+    })
   }
 
   var show_notification = function(data) {
+    console.log('interruption received', data);
     $scope.setView('pouz', data);
   };
 

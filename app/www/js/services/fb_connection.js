@@ -54,7 +54,7 @@ pouzApp.service('FBConnection', [ '$http', function( $http) {
     },
 
     user_id: function() {
-      return userConnection.id;
+      return userConnection.uid;
     },
 
     user_token: function() {
