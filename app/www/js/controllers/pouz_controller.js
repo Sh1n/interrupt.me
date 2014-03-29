@@ -43,6 +43,8 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       if (success) {
         DEBUG && alert('already logged in');
         $scope.successfully_logged_in(false);
+      } else {
+        $scope.setView('login');
       }
     })
 
