@@ -1,0 +1,33 @@
+<script src="socket.io.js"></script>
+<script>
+var interruptions = {
+	"beer": {
+		"title": "Drink a beer",
+		"description": "It's healthy and fun!",
+		"icon": "beer.png"
+	},
+	"sex": {
+		"title": "Have a nice fuck",
+		"description": ";)",
+		"icon": "boobs.png"
+	}
+};
+
+function interrupt(label, fbId) {
+	socket.emit("interrupt", {label: label, fbId: fbId});
+}
+
+function sendToken() {
+	socket.emit("token", {fbId: fakeFbId})
+}
+
+var socket = io.connect('http://localhost:3000');
+
+var fakeFbId = Math.random();
+
+socket.on("interruption", function(data) {
+	console.log(data);
+});
+
+//socket.emit("interrupt", {"type": "beer", "friend": "XYZ"})
+</script>
