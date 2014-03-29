@@ -10,11 +10,19 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
     $scope.$apply();
   }
 
+  var show_notification = function(data) {
+    $scope.setView('pouz', data);
+  };
+
   $scope.successfully_logged_in = function(first_login) {
       // open connection with server
       pouzServer.openConnection(FBConnection.user_id(), FBConnection.user_token());
 
+      // notify background service
       pouzServer.registerInterruptionCallback(notifications.notify);
+
+      // show interruption in app
+      pouzServer.registerInterruptionCallback(show_notification);
 
       DEBUG && alert('logged in');
 
@@ -23,7 +31,7 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       //   //TODO
       //   $scope.setView('friends_list');
       // } else {
-        $scope.setView('friends_list');
+      $scope.setView('friends_list');
       //}
   };
 
