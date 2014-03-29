@@ -101,6 +101,7 @@ function connectServer(pouzServer, userFbId)
 				title:   e.label,
 				message: 'Time for an interruption!',
 				date:    _almost_now,
+				autoCancel: true, 
 
 				json:   JSON.stringify(e)
 			});
