@@ -1,7 +1,41 @@
-<div class="interruption">
-    <div><img src="http://placehold.it/200x200"></div>
-    <h4>{{current_interruption.title}}</h3>
-    <h4>{{current_interruption.description}}</h4>
-</div>
 
-<button ng-click='send(current_interruption_key, view_params.friend)'>Send</button>
+<div class="container-fluid">
+
+
+
+    <div class="row-fluid">
+
+
+
+        <!-- Interruption Icon -->
+        <div id="interruptionIcon">
+            <img class="img-rounded" src="http://placehold.it/150x150" alt=""/>
+            <img class="img-rounded" src="http://placehold.it/50x50" alt=""/>
+
+        </div>
+        <br />
+
+        <!-- Interruption Name -->
+        <div id="interruptionName">
+            <h3>{{current_interruption.title}}</h3>
+        </div>
+        <br />
+
+
+        <!-- Interruption Fact -->
+        <div id="interruptionFact">
+            <p>
+                {{current_interruption.description}}
+            </p>
+        </div>
+        <br />
+
+        <!-- Interruption Controls -->
+        <div id="interruptionControls">
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger" ng-click='back()' >X</button>
+                <button type="button" class="btn btn-success"  ng-click='send(current_interruption_key, view_params.friend)'>Interrupt</button>
+            </div>
+        </div>
+    </div>
+</div>
