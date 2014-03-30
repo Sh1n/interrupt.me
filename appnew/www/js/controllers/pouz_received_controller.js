@@ -2,6 +2,8 @@ pouzApp.controller('PouzReceivedController', ['$scope','interruptions', 'pouzSer
 
   $scope.interruption = interruptions.interruptions[$scope.view_params.label];
 
+
+
   $scope.accept = function() {
     pouzServer.sendReaction($scope.view_params, true);
     $scope.setView('friends_list');
