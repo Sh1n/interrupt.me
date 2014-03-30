@@ -26,27 +26,454 @@ function sendFbNotification(userId) {
 
 
 var interruptionLabels = [
-	{
-		label: "lunch",
-		time: {
-			from: 12,
-			to: 15
-		}
-	},
-	{
-		label: "beer",
-		time: {
-			from: 16,
-			to: 2
-		}
-	},
-	{
-		label: "sex",
-		time: {
-			from: 16,
-			to: 3
-		}
-	}
+    {
+        "days": "all",
+        "label": "1.1",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.2",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.3",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.4",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.5",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.6",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.7",
+        "time": {
+            "from": 12,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.9",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.11",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.12",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.13",
+        "time": {
+            "from": 14,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.14",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.15",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "1.16",
+        "time": {
+            "from": 14,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.1",
+        "time": {
+            "from": 14,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.2",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.3",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.4",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.5",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.6",
+        "time": {
+            "from": 16,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.7",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.8",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.9",
+        "time": {
+            "from": 12,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.10",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.11",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.12",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "weekends",
+        "label": "2.13",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "2.14",
+        "time": {
+            "from": 20,
+            "to": 23
+        }
+    },
+    {
+        "days": "weekends",
+        "label": "2.15",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.1",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.2",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.3",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.4",
+        "time": {
+            "from": 10,
+            "to": 23
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.5",
+        "time": {
+            "from": 10,
+            "to": 23
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.6",
+        "time": {
+            "from": 11,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.7",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "weekdays",
+        "label": "3.8",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.9",
+        "time": {
+            "from": 18,
+            "to": 23
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.10",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.11",
+        "time": {
+            "from": 17,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.12",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.13",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.14",
+        "time": {
+            "from": 20,
+            "to": 23
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.15",
+        "time": {
+            "from": 10,
+            "to": 23
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.16",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.17",
+        "time": {
+            "from": 10,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.18",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.19",
+        "time": {
+            "from": 10,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.20",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.21",
+        "time": {
+            "from": 14,
+            "to": 18
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.22",
+        "time": {
+            "from": 11,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.23",
+        "time": {
+            "from": 13,
+            "to": 20
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.24",
+        "time": {
+            "from": 10,
+            "to": 22
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.25",
+        "time": {
+            "from": 11,
+            "to": 18
+        }
+    },
+    {
+        "days": "weekends",
+        "label": "3.26",
+        "time": {
+            "from": 10,
+            "to": 17
+        }
+    },
+    {
+        "days": "all",
+        "label": "3.27",
+        "time": {
+            "from": 13,
+            "to": 18
+        }
+    }
 ];
 
 function sendMessage(fbId, messageName, messageObject, next) {
@@ -54,6 +481,9 @@ function sendMessage(fbId, messageName, messageObject, next) {
 
 	if (!socketArr) {
 		console.error("sendMessage -- connection with that fbId not found.", fbId);
+		if (typeof next === "function") {
+			return next(0);
+		}
 		return;
 	}
 
@@ -77,14 +507,6 @@ io.sockets.on("connection", function (socket) {
 
 			sockets[data.fbId] = sockets[data.fbId] || [];
 			sockets[data.fbId].push(socket);
-
-			var filteredLabels = interruptionLabels.filter(createFilterForTime(socketArr[0].timeZoneOffset));
-
-			var label = randomInterruption(filteredLabels);
-
-			if (label) {
-				socket.emit("interruption", {label: label.label});
-			}
 		}
 	});
 
