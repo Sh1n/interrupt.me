@@ -22,11 +22,14 @@ pouzApp.service('FBConnection', [ '$http', function( $http) {
     // if user is logged open immediatelly connection and move on
     try_login: function(callback) {
       FB.getLoginStatus(function(response) {
-        if (response.status == 'connected') {
-          userConnection.uid = response.authResponse.userID;
-          userConnection.accessToken = response.authResponse.accessToken;
+        userConnection.uid = response.authResponse.userID;
+        userConnection.accessToken = response.authResponse.accessToken;
 
-          callback(true);
+        if (response.status == 'connected') {
+          FB.api('/me', {fileds: 'id,email,first_nama,last_name'}, function(me_response) {
+            userConnection.uid = me_response.id;
+            callback(true);
+          });
         } else {
           callback(false);
         }

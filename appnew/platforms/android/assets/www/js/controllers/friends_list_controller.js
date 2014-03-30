@@ -7,6 +7,8 @@ pouzApp.controller('FriendsListController', ['$scope', 'FBConnection', 'pouzServ
        $scope.safeApply(function() {
          DEBUG && alert('friends loaded ');
          $scope.friends = response.data;
+
+
        });
     });
   };
