@@ -7,12 +7,15 @@ pouzApp.controller('InterruptionController', ['$scope', 'interruptions', 'pouzSe
 
   $scope.back = function() {
     $scope.setView('friends_list');
+    return false;
   };
 
   $scope.open = function(key, interruption) {
     $scope.subview = 'interruption_detail';
     $scope.current_interruption_key = key;
     $scope.current_interruption = interruption;
+
+    return false;
   };
 
   $scope.send = function(key, friend) {

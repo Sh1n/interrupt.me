@@ -1,32 +1,76 @@
+    <style>
+/*
+        #header{
+            height: 70px;
+            background: #E74B3c;
+            line-height: 70px;
+        }*/
+/*
+        a{
+            color: white;
+            font-weight: lighter;
+            font-size: 15px;
+        }*/
+        body, html{
+            background : white;
+        }
+/*
+        .name{
+            font-weight: bold;
+            color: #E74B3c;
+            text-align: center;
+            position: relative;
+            top: -60px;
+        }*/
+
+        .text{
+            color: #3C5A99;
+            font-weight: bolder;
+            text-align: center;
+            position: relative;
+            top: -60px;
+        }
+
+        .hellyes{
+            position: relative;
+            top: -40px;
+        }
+
+        .badge-img {
+            position: relative;
+            top: -75px;
+        }
+
+    </style>
+
 <div ng-controller='ReactionReceivedController'>
     <div class="row-fluid clearfix" id="header">
 
         <div class="col-xs-3">
-            <a href="invite.html" ng-click='back()'>&lt; BACK</a>
+            <a ng-click='back()'>&lt;BACK</a>
         </div>
 
         <div class="col-xs-6 col-xs">
-            <img src="img/logo-pouz.svg" alt="Pouz" style="margin-top: 10px;"/>
+            <img src="img/logo-pouz.png" alt="Pouz" style="margin-top: 10px;" class="img-responsive"/>
         </div>
 
     </div>
 
     <br />
-
     <div class="row-fluid clearfix">
         <!-- Profile Badge -->
         <div class="col-xs-1"></div>
-        <div class="col-xs-10">
+        <div class="col-xs-10 col-md-10">
 
             <div class="media">
-                <img class="img-circle" src="{{reaction.pouz_icon}}" alt=""/>
-                <img class="badge-img img-circle" src="{{reaction.user_picture}}" />
+                <img class="img-circle full-width-img" src="{{reaction.pouz_icon}}"  alt=""/>
+                <img class="badge-img bordered-img img-circle" src="{{reaction.user_picture}}" />
             </div>
 
         </div>
     </div>
 
-    <h2 class="name">{{reaction.user_name}}</h2>
+    <h3 class="name">{{reaction.user_name}}</h3>
 
     <div class="row-fluid">
         <div class="col-xs-10 col-xs-offset-1">
@@ -35,7 +79,7 @@
 
 
             <button class="btn btn-success btn-block btn-lg hellyes" ng-click='back()'>
-                <img src="img/hell-yes.svg" height="20px"/> &nbsp; That's great man!
+                <img src="img/hell-yes.png" height="20px"/> &nbsp; That's great man!
             </button>
 
         </div>

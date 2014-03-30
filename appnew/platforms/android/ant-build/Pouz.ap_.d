@@ -56,6 +56,7 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/confirm.html \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/interruption_detail.html \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/splash.html \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/wellcome.html \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/login.html \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/pouzes.html \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/views/reaction.html \
@@ -86,10 +87,20 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/notification.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/plugins/org.apache.cordova.dialogs/www/android/notification.js \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/hell-yes.png \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/thats-great.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/logo-pouz.svg \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/logo.png \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/boooh.svg \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/thats-great.svg \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/boooh.png \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/paper-plane.svg \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/logo-pouz.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/hell-yes.svg \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/later.svg \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/later.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/paper-plane.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-05.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-03.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-07.png \
@@ -99,7 +110,6 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-02.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-05.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-06.png \
-/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1.01.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-02.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-17.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-15.png \
@@ -127,7 +137,6 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-03.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-23.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-01.png \
-/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-07 BIS.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-03.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-12.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-10.png \
@@ -135,11 +144,13 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-18.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-14.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-06.png \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-07.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-04.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-14.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-10.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-11.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/2-15.png \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-01.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/1-09.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-19.png \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/img/pouz_icons/3-14.png \
@@ -419,6 +430,7 @@
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/services/server.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/login_controller.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/friends_list_controller.js \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/wellcome_controller.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/reaction_received_controller.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/pouz_controller.js \
 /home/docx/Dev/interrupt.me/appnew/platforms/android/assets/www/js/controllers/pouz_received_controller.js \

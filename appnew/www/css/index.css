@@ -25,12 +25,45 @@
 a{
     color: white;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 14px;
 }
+
+img.full-width-img {
+  width:95%;
+}
+
+img.medium-width-img {
+  width:75%;
+}
+img.small-width-img {
+  width:25%;
+}
+
+img.bordered-img{
+  border: 3px solid #3C5A99;
+}
+
+.full-width{
+  width: 85%;
+}
+
+.btn-blue{
+            background: #3c5a99;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-green{
+            color:white;
+            font-weight: bold;
+        }
+
+        .btn-blue:hover{
+            color:white;
+        }
 
 .name{
     font-weight: bold;
-    font-size: 48px;
     color: #E74B3c;
     text-align: center;
     position: relative;
@@ -40,11 +73,18 @@ a{
 .text{
     color: #3C5A99;
     font-weight: bolder;
-    font-size: 30px;
     text-align: center;
     position: relative;
     top: -60px;
 }
+
+span.pouz{
+    color: #3C5A99;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
 
 .hellyes{
     position: relative;
@@ -124,6 +164,7 @@ body, html{
 .pouz-title {
     font-weight: bold;
     font-size: 20px;
+    color:  #e74b3c;
 }
 
 .pouz {
