@@ -1,4 +1,4 @@
-pouzApp.service('notifications', function() {
+pouzApp.service('notifications', ['interruptions', function(interruptions) {
 
   var notify = function(e)
   {
@@ -17,8 +17,10 @@ pouzApp.service('notifications', function() {
 
       window.plugin.notification.local.add({
         //id:      1,
-        title:   e.label,
-        message: 'Time for an interruption!',
+        title:   interruptions.interruptions[e.label].title,
+        message: interruptions.interruptions[e.label].descriptions[
+          Math.floor(Math.random() * interruptions.interruptions[e.label].descriptions.length)
+        ],
         date:    _almost_now,
         autoCancel: true,
 
@@ -38,4 +40,4 @@ pouzApp.service('notifications', function() {
     notify: notify
   };
 
-});
+}]);

@@ -2,6 +2,12 @@ pouzApp.controller('PouzReceivedController', ['$scope','interruptions', 'pouzSer
 
   $scope.interruption = interruptions.interruptions[$scope.view_params.label];
 
+
+
+  $scope.interruption.description =
+    $scope.interruption.descriptions[
+    $scope.view_params.description_index];
+
   $scope.sender = FBConnection.get_friend($scope.view_params.senderFbId);
 
 
