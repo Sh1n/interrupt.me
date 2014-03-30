@@ -17,11 +17,6 @@ pouzApp.value('interruptions', {
       title: 'Fun',
       description: 'Fun is fun',
       picture: ''
-    },
-    'food': {
-      title: 'Food',
-      description: 'Food is always good pick',
-      picture: ''
     }
   },
 
@@ -33,7 +28,7 @@ pouzApp.value('interruptions', {
             "A hydrated brain will work better.",
             "Your body is 60-70% water. Don't let that go down. :)"
         ],
-        "picture": "img/pouz_icons/1-1.png",
+        "picture": "img/pouz_icons/1-01.png",
         "title": "Drink water"
     },
     "1.11": {
@@ -103,7 +98,7 @@ pouzApp.value('interruptions', {
             "Let the sun caress your skin",
             "A gentle walk will help you think better."
         ],
-        "picture": "img/pouz_icons/1-2.png",
+        "picture": "img/pouz_icons/1-02.png",
         "title": "Take a walk"
     },
     "1.3": {
@@ -113,7 +108,7 @@ pouzApp.value('interruptions', {
             "You\u2019ll feel like a million bucks",
             "Your body was made to be active"
         ],
-        "picture": "img/pouz_icons/1-3.png",
+        "picture": "img/pouz_icons/1-03.png",
         "title": "Do some stretching"
     },
     "1.4": {
@@ -123,7 +118,7 @@ pouzApp.value('interruptions', {
             "Fruits are full of fiber and vitamins. And vitamins are magic",
             "The fresh taste will make you more energetic."
         ],
-        "picture": "img/pouz_icons/1-4.png",
+        "picture": "img/pouz_icons/1-04.png",
         "title": "Eat an apple"
     },
     "1.5": {
@@ -133,7 +128,7 @@ pouzApp.value('interruptions', {
             "It\u2019s good against type II diabetes and helps wth weight loss",
             "High in potasium, low on salt, it will officially lower your blood pressure."
         ],
-        "picture": "img/pouz_icons/1-5.png",
+        "picture": "img/pouz_icons/1-05.png",
         "title": "Eat a banana"
     },
     "1.6": {
@@ -143,7 +138,7 @@ pouzApp.value('interruptions', {
             "Breath in, breath out. This will calm you down.",
             "Keeping your brain oxygenated will make it work faster."
         ],
-        "picture": "img/pouz_icons/1-6.png",
+        "picture": "img/pouz_icons/1-06.png",
         "title": "Take some fresh air"
     },
     "1.7": {
@@ -153,7 +148,7 @@ pouzApp.value('interruptions', {
             "Admire the scenery. Nature is lovely",
             "Look at the sky. The blue sky will make you calmer."
         ],
-        "picture": "img/pouz_icons/1-7.png",
+        "picture": "img/pouz_icons/1-07.png",
         "title": "Stop staring at the screen"
     },
     "1.9": {
@@ -163,7 +158,7 @@ pouzApp.value('interruptions', {
             "It's like stretching for the mind",
             "You'll find new solutions to old problems."
         ],
-        "picture": "img/pouz_icons/1-9.png",
+        "picture": "img/pouz_icons/1-09.png",
         "title": "Meditate"
     },
     "2.1": {
@@ -173,7 +168,7 @@ pouzApp.value('interruptions', {
             "They will appreciate the gesture.",
             "This is the best way to disconnect."
         ],
-        "picture": "img/pouz_icons/2-1.png",
+        "picture": "img/pouz_icons/2-01.png",
         "title": "Call your family"
     },
     "2.10": {
@@ -243,7 +238,7 @@ pouzApp.value('interruptions', {
             "Connecting with your loved ones makes you feel better.",
             "Talk about common memories."
         ],
-        "picture": "img/pouz_icons/2-2.png",
+        "picture": "img/pouz_icons/2-02.png",
         "title": "Call a friend"
     },
     "2.3": {
@@ -253,7 +248,7 @@ pouzApp.value('interruptions', {
             "Write something funny",
             "Make them smile."
         ],
-        "picture": "img/pouz_icons/2-3.png",
+        "picture": "img/pouz_icons/2-03.png",
         "title": "Text a friend"
     },
     "2.4": {
@@ -263,7 +258,7 @@ pouzApp.value('interruptions', {
             "You will make her/him happy",
             "You will get extra points. :)"
         ],
-        "picture": "img/pouz_icons/2-4.png",
+        "picture": "img/pouz_icons/2-04.png",
         "title": "Say \"I love you\" to someone"
     },
     "2.5": {
@@ -273,7 +268,7 @@ pouzApp.value('interruptions', {
             "Being polite is the way to go.",
             "Good things will happen."
         ],
-        "picture": "img/pouz_icons/2-5.png",
+        "picture": "img/pouz_icons/2-05.png",
         "title": "Say thank you"
     },
     "2.6": {
@@ -283,7 +278,7 @@ pouzApp.value('interruptions', {
             "What else could you do?",
             "We would love to see this."
         ],
-        "picture": "img/pouz_icons/2-6.png",
+        "picture": "img/pouz_icons/2-06.png",
         "title": "Kiss someone"
     },
     "2.7": {
@@ -293,7 +288,7 @@ pouzApp.value('interruptions', {
             "Need an explanation?",
             "Make it the one person you always wanted to hug."
         ],
-        "picture": "img/pouz_icons/2-7.png",
+        "picture": "img/pouz_icons/2-07.png",
         "title": "Hug someone"
     },
     "2.8": {
@@ -303,18 +298,8 @@ pouzApp.value('interruptions', {
             "You will enjoy it so much.",
             "Invite that special someone."
         ],
-        "picture": "img/pouz_icons/2-8.png",
+        "picture": "img/pouz_icons/2-08.png",
         "title": "Get a coffee with someone"
-    },
-    "2.9": {
-        "category": "social",
-        "descriptions": [
-            "Your new motto: never eat alone",
-            "Talk about new topics",
-            "Company while you eat is great."
-        ],
-        "picture": "img/pouz_icons/2-9.png",
-        "title": "Eat with someone"
     },
     "3.1": {
         "category": "fun",
@@ -323,7 +308,7 @@ pouzApp.value('interruptions', {
             "Try harder.",
             "We would like to see this!"
         ],
-        "picture": "img/pouz_icons/3-1.png",
+        "picture": "img/pouz_icons/3-01.png",
         "title": "Touch your elbow with your tongue"
     },
     "3.10": {
@@ -360,8 +345,8 @@ pouzApp.value('interruptions', {
         "category": "fun",
         "descriptions": [
             "There is something magical about smiling.",
-            "Double happiness here! ;) You might get lucky :)",
-            "10"
+            "Double happiness here!",
+            ";) You might get lucky :)"
         ],
         "picture": "img/pouz_icons/3-13.png",
         "title": "Smile to someone"
@@ -385,16 +370,6 @@ pouzApp.value('interruptions', {
         ],
         "picture": "img/pouz_icons/3-15.png",
         "title": "Watch a fun video"
-    },
-    "3.16": {
-        "category": "fun",
-        "descriptions": [
-            "1 minute should do it.",
-            "You'll never get this minute back. :)",
-            "Another minute of your life is gone now."
-        ],
-        "picture": "img/pouz_icons/3-16.png",
-        "title": "Watch nyan cat for 1 minute"
     },
     "3.17": {
         "category": "fun",
@@ -433,7 +408,7 @@ pouzApp.value('interruptions', {
             "Enjoy the old fashion way of enjoying a book",
             "For you or for a friend."
         ],
-        "picture": "img/pouz_icons/3-2.png",
+        "picture": "img/pouz_icons/3-02.png",
         "title": "Buy a book"
     },
     "3.20": {
@@ -523,7 +498,7 @@ pouzApp.value('interruptions', {
             "Get inspired online.",
             "Or tweet about #pouz"
         ],
-        "picture": "img/pouz_icons/3-3.png",
+        "picture": "img/pouz_icons/3-03.png",
         "title": "Write a funny tweet"
     },
     "3.4": {
@@ -533,7 +508,7 @@ pouzApp.value('interruptions', {
             "Ask a co-worker for suggesitons.",
             "This will make Spotify happy."
         ],
-        "picture": "img/pouz_icons/3-4.png",
+        "picture": "img/pouz_icons/3-04.png",
         "title": "Listen to a new song"
     },
     "3.5": {
@@ -543,7 +518,7 @@ pouzApp.value('interruptions', {
             "This brings back memories!",
             "Now you are ready to be creative!"
         ],
-        "picture": "img/pouz_icons/3-5.png",
+        "picture": "img/pouz_icons/3-05.png",
         "title": "Listen to your favourite song"
     },
     "3.6": {
@@ -553,7 +528,7 @@ pouzApp.value('interruptions', {
             "This will be a fun day at work!",
             "Sex stuff allowed!"
         ],
-        "picture": "img/pouz_icons/3-6.png",
+        "picture": "img/pouz_icons/3-06.png",
         "title": "Truth or dare"
     },
     "3.7": {
@@ -563,7 +538,7 @@ pouzApp.value('interruptions', {
             "Use some filters!",
             "Of course, post it online!"
         ],
-        "picture": "img/pouz_icons/3-7.png",
+        "picture": "img/pouz_icons/3-07.png",
         "title": "Take a picture"
     },
     "3.8": {
@@ -573,7 +548,7 @@ pouzApp.value('interruptions', {
             "Relaxes your feet, relaxes your mind.",
             "Just like at home."
         ],
-        "picture": "img/pouz_icons/3-8.png",
+        "picture": "img/pouz_icons/3-08.png",
         "title": "Take off your shoes"
     },
     "3.9": {
@@ -583,7 +558,7 @@ pouzApp.value('interruptions', {
             "Stand up, pump up the volume.",
             "Don't do it alone!"
         ],
-        "picture": "img/pouz_icons/3-9.png",
+        "picture": "img/pouz_icons/3-09.png",
         "title": "Dance"
     }
 }

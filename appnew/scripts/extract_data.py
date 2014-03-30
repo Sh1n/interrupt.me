@@ -8,7 +8,7 @@ CATEGORIES = {
     3: 'fun'
 }
 
-POUZES_TO_IGNORE = ['1.8', '1.10']
+POUZES_TO_IGNORE = ['1.8', '1.10', '2.9', '3.16']
 
 def main():
     if len(sys.argv) != 2:
@@ -24,12 +24,14 @@ def main():
             pouz_id, title, descr1, descr2, descr3, hours_from, hours_to, days = row[:8]
             # print pouz_id, title, descr1, descr2, descr3, hours_from, hours_to, days
             if pouz_id not in POUZES_TO_IGNORE:
-                category = CATEGORIES[int(pouz_id.split('.')[0])]
+                category_number, number = map(int, pouz_id.split('.'))
+                category = CATEGORIES[category_number]
+
                 client_data[pouz_id] = {
                     'category': category,
                     'title': title,
                     'descriptions': [descr1, descr2, descr3],
-                    'picture': 'img/pouz_icons/%s.png' % pouz_id.replace('.', '-')
+                    'picture': 'img/pouz_icons/%d-%s.png' % (category_number, str(number).rjust(2, '0'))
                 }
 
                 server_data.append({
@@ -41,9 +43,9 @@ def main():
                     'days': days
                 })
     # print client data
-    # print json.dumps(client_data, indent=4, sort_keys=True)
+    print json.dumps(client_data, indent=4, sort_keys=True)
     # print server data
-    print json.dumps(server_data, indent=4, sort_keys=True)
+    # print json.dumps(server_data, indent=4, sort_keys=True)
 
 
 if __name__ == '__main__':
