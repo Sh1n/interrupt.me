@@ -6,12 +6,12 @@ pouzApp.controller('PouzReceivedController', ['$scope','interruptions', 'pouzSer
 
 
   $scope.accept = function() {
-    pouzServer.sendReaction($scope.view_params, true);
+    pouzServer.react($scope.view_params, true);
     $scope.setView('friends_list');
   }
 
   $scope.deny = function() {
-    pouzServer.sendReaction($scope.view_params, false);
+    pouzServer.react($scope.view_params, false);
     $scope.setView('friends_list');
   }
 

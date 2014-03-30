@@ -1,6 +1,4 @@
-pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'notifications' , function($scope, FBConnection, pouzServer, notifications) {
-
-  // load facebook API
+pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'notifications', 'PhoneGap' , function($scope, FBConnection, pouzServer, notifications, PhoneGap) {
 
   $scope.view = 'splash';
 
@@ -27,6 +25,12 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
     $scope.setView('pouz', data);
   };
 
+  var show_reaction = function(data) {
+    console.log('reaction received', data);
+    $scope.setView('reaction', data);
+  };
+
+
   $scope.successfully_logged_in = function(first_login) {
       // open connection with server
       pouzServer.openConnection(FBConnection.user_id(), FBConnection.user_token());
@@ -36,6 +40,11 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
 
       // show interruption in app
       pouzServer.registerInterruptionCallback(show_notification);
+
+      // show reaction in app
+      pouzServer.registerReactionCallback(show_reaction);
+
+
 
       DEBUG && alert('logged in');
 
@@ -48,7 +57,7 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       //}
   };
 
-  var ready = function() {
+  PhoneGap.load_facebook_api(function() {
     DEBUG && alert('trying to login');
     // get user state
     FBConnection.try_login(function(success) {
@@ -61,49 +70,7 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
       }
     })
 
-  }
-
-  if (window.cordova || window.PhoneGap || window.phonegap) {
-    DEBUG && alert('loading PhoneGap libs');
-
-    jQuery.getScript('js/fb/facebook-js-sdk.js', function() {
-      DEBUG && alert('PhoneGap is loaded');
-
-      document.addEventListener('deviceready', function() {
-        ready();
-      }, false);
-    })
-    .fail(function(xhr, settings, exception) {
-      DEBUG && alert('js failed to load ' + exception);
-    });
-
-  } else {
-
-    // initialize FB online
-    $(function() {
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: app.fbId,
-          status: true,
-          xfbml: true
-        });
-
-        ready();
-
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/all.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-
-    })
-
-  }
+  });
 
 
 

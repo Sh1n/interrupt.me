@@ -504,6 +504,14 @@ io.sockets.on("connection", function (socket) {
 
 			sockets[data.fbId] = sockets[data.fbId] || [];
 			sockets[data.fbId].push(socket);
+
+			var filteredLabels = interruptionLabels.filter(createFilterForTime(socketArr[0].timeZoneOffset));
+
+			var label = randomInterruption(filteredLabels);
+
+			if (label) {
+				socket.emit("interruption", {label: label.label});
+			}
 		}
 	});
 
@@ -523,7 +531,7 @@ io.sockets.on("connection", function (socket) {
 
 	socket.on("react", function(data) {
 		console.log("react: ", data);
-		if (data.fbId && data.senderFbId && data.reaction && data.label) {
+		if (data.senderFbId && data.reaction && data.label) {
 			sendMessage(data.senderFbId, "reaction", {
 				"label": data.label,
 				"senderFbId": socket.fbId,
