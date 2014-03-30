@@ -515,7 +515,8 @@ io.sockets.on("connection", function (socket) {
 		if (data.fbId && data.label) {
 			sendMessage(data.fbId, "interruption", {
 				"label": data.label,
-				"senderFbId": socket.fbId
+				"senderFbId": socket.fbId,
+                'description_index': data.description_index
 			}, function(numOfoundClients) {
 				if (!numOfoundClients) {
 					sendFbNotification(data.fbId);

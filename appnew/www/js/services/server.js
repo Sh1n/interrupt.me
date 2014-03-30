@@ -33,9 +33,9 @@ pouzApp.service('pouzServer', ['serverUrl', function(serverUrl) {
       console.log('connected to socket');
     },
 
-    interrupt: function(fbId, label) {
+    interrupt: function(fbId, label, desc_index) {
       console.log('interruption sent', fbId, label);
-      socket.emit("interrupt", {label: label, fbId: fbId});
+      socket.emit("interrupt", {label: label, fbId: fbId, description_index: desc_index});
     },
 
     react: function(interruption, reaction) {

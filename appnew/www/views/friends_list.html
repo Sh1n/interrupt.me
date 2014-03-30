@@ -38,7 +38,7 @@
 
 
 
-  <div class='row-fluid friend' ng-class='{even: $index % 2 == 0}'  ng-repeat='friend in friends'>
+  <div class='row-fluid friend' ng-class='{even: $index % 2 == 0}'  ng-repeat='friend in friends | orderBy:"name"'>
     <div  ng-click='interrupt(friend)'>
       <div class='col-xs-3 pic text-center  friendlist-item'>
         <img class="img-circle bordered-img" src="{{friend.picture.data.url}}" alt=""/>
