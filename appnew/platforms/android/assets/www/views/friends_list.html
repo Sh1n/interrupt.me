@@ -1,31 +1,53 @@
+<style>
+
+  html,body {
+    background:white;
+  }
+
+  .friendlist-item {
+    line-height: 70px;
+    font-weight: lighter;
+    font-size:14px;
+    color: #3C5A99;
+  }
+
+  .friend.even div {
+    background: #e0e0e0;
+  }
+
+</style>
+
 <div ng-controller='FriendsListController'>
 
 <div class="row-fluid clearfix" id="header">
-  <div class="col-xs-3">
-  </div>
 
-  <div class="col-xs-6 col-xs">
-    <img src="img/logo-pouz.svg" alt="Pouz" style="margin-top: 10px;"/>
+  <div class="col-xs-6 col-xs-offset-3">
+    <img src="img/logo-pouz.png" alt="Pouz" style="margin-top: 10px;"/>
+
   </div>
 </div>
 
+<div class='clearfix'></div>
 
   <div class="row-fluid">
-    <div class="col-md-12 text-center">
+    <div class="text-center">
       <h1>Pouz your friends</h1>
+      <br>
     </div>
   </div>
 
-  <div class="row-fluid">
-    <div class="col-md-12 friendlist">
-      <div class='row-fluid friend clearfix'  ng-repeat='friend in friends'>
-        <div  ng-click='interrupt(friend)'>
-          <div class='col-xs-3 pic text-center'><img class="img-circle" src="{{friend.picture.data.url}}" alt=""/></div>
-          <div class='col-xs-9 name'><span> {{friend.name}}</span></div>
-        </div>
+
+
+  <div class='row-fluid friend' ng-class='{even: $index % 2 == 0}'  ng-repeat='friend in friends'>
+    <div  ng-click='interrupt(friend)'>
+      <div class='col-xs-3 pic text-center  friendlist-item'>
+        <img class="img-circle bordered-img" src="{{friend.picture.data.url}}" alt=""/>
       </div>
-
+      <div class='col-xs-9  friendlist-item friendlist-name'>
+        <span style="font-size: lighter;"> {{friend.name}}</span>
+      </div>
     </div>
   </div>
+
 
 </div>

@@ -48,12 +48,14 @@ pouzApp.controller('PouzController', ['$scope', 'FBConnection', 'pouzServer', 'n
 
       DEBUG && alert('logged in');
 
-      // go to main view
-      // if (first_login) {
-      //   //TODO
-      //   $scope.setView('friends_list');
-      // } else {
-      $scope.setView('friends_list');
+      // load friend list first
+      FBConnection.get_friends_list(function() {
+        if (first_login) {
+          $scope.setView('wellcome');
+        } else {
+          $scope.setView('friends_list');
+        }
+      });
       //}
   };
 
