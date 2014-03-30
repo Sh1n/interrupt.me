@@ -481,6 +481,9 @@ function sendMessage(fbId, messageName, messageObject, next) {
 
 	if (!socketArr) {
 		console.error("sendMessage -- connection with that fbId not found.", fbId);
+		if (typeof next === "function") {
+			return next(0);
+		}
 		return;
 	}
 
