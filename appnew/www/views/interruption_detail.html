@@ -1,60 +1,48 @@
 <style>
-    #header{
-        height: 70px;
-        background: #E74B3c;
-        line-height: 70px;
-    }
-    a{
-        color: white;
-        font-weight: lighter;
-        font-size: 15px;
-    }
-
+html,body {
+    background: white;
+}
     .interruption-picture {
       width: 120px;
       height: 120px;
     }
+
+
+
+    hr{
+        position: relative;
+        top: -65px;
+    }
 </style>
 
+    <br />
 
-<div class="container-fluid">
+    <div class="row-fluid clearfix">
+        <!-- Profile Badge -->
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 col-md-10">
 
-
-
-    <div class="row-fluid">
-
-
-
-        <!-- Interruption Icon -->
-        <div id="interruptionIcon">
-            <img class="img-rounded interruption-picture" src="{{current_interruption.picture}}" alt=""/>
-            <img class="img-rounded" src="http://placehold.it/50x50" alt=""/>
-
-        </div>
-        <br />
-
-
-        <!-- Interruption Name -->
-        <div id="interruptionName">
-            <h3>{{current_interruption.title}}</h3>
-        </div>
-        <br />
-
-
-        <!-- Interruption Fact -->
-        <div id="interruptionFact">
-            <p>
-                {{current_interruption.description}}
-            </p>
-        </div>
-        <br />
-
-        <!-- Interruption Controls -->
-        <div id="interruptionControls">
-            <div class="btn-group">
-                <button type="button" class="btn btn-danger" ng-click='back()' >X</button>
-                <button type="button" class="btn btn-success"  ng-click='send(current_interruption_key, view_params.friend)'>Interrupt</button>
+            <div class="media">
+                <img class="img-circle full-width-img" src="{{view_params.friend.picture.data.url}}"  alt=""/>
+                <img class="badge-img bordered-img img-circle small-width-img" src="{{current_interruption.picture}}" />
             </div>
+
         </div>
     </div>
-</div>
+
+    <h3 class="name">{{current_interruption.title}}</h3>
+
+    <hr />
+
+    <p class="text">
+                {{current_interruption.description}}
+    </p>
+
+
+        <!-- Interruption Controls -->
+        <div id="interruptionControls" class="block-center">
+            <div class="btn-toolbar text-center">
+                <button type="button" style="width: 45%" class="btn btn-danger" ng-click='back()' >X</button>
+                <button type="button"  style="width: 45%" class="btn btn-success btn-green"  ng-click='send(current_interruption_key, view_params.friend)'>Interrupt</button>
+            </div>
+        </div>

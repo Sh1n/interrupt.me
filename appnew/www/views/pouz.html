@@ -1,44 +1,82 @@
+<style>
+html,body {
+    background: white;
+}
+    .interruption-picture {
+      width: 120px;
+      height: 120px;
+    }
+
+    .toolbar{
+            width: 90%;
+            margin: auto;
+        }
+
+    .badge-img{
+      left: -25%;
+    }
+
+    hr{
+        position: relative;
+        top: -65px;
+    }
+</style>
+
 <div ng-controller='PouzReceivedController'>
+<div class="row-fluid clearfix" id="header">
 
-<div class="container-fluid">
-    <div class="row-fluid">
-
-        <div ng-if='sender'>
-        From:
-        <img src='{{sender.picture.data.url}}' />
-        {{sender.name}}
+        <div class="col-xs-3">
+            <a href=""  ng-click='back()'>&lt;BACK</a>
         </div>
 
-        <!-- Interruption Icon -->
-        <div id="interruptionIcon">
-            <img class="img-rounded" src="{{interruption.picture}}" alt=""/>
+        <div class="col-xs-6 col-xs">
+            <img src="img/logo-pouz.svg" alt="Pouz" style="margin-top: 10px;"/>
         </div>
-        <br />
 
-        <!-- Interruption Name -->
-        <div id="interruptionName">
-            <h3>{{interruption.title}}</h3>
-        </div>
-        <br />
+    </div>
+    <br />
+  <span class="pouz"><span style="color:#E74B3c;">{{sender.name}}</span> pouzed you</span>
+    <br /><br />
+  <div class="row-fluid clearfix">
+      <!-- Profile Badge -->
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10 col-md-10">
 
+          <div class="media text-center">
+              <img class="img-circle medium-width-img" src="{{interruption.picture}}"  alt=""/>
+              <img class="badge-img bordered-img img-circle small-width-img" src="{{sender.picture.data.url}}" />
+          </div>
 
-        <!-- Interruption Fact -->
-        <div id="interruptionFact">
-            <p>
-                {{interruption.description}}
-            </p>
-        </div>
-        <br />
+      </div>
+  </div>
 
-        <!-- Interruption Controls -->
-        <div id="interruptionControls">
-            <div class="btn-group">
-                <button type="button"  ng-click='deny()' class="btn btn-danger">Maybe Later</button>
-                <button type="button"  ng-click='accept()' class="btn btn-success">Fuck Yeah</button>
-            </div>
+     <h3 class="name">{{interruption.title}}</h3>
+    <hr />
+
+    <p class="text">{{interruption.description}}</p>
+    
+
+    <!-- Interruption Controls -->
+    <div id="interruptionControls">
+        <div class="btn-toolbar text-center hellyes">
+          
+
+                <button class="btn btn-blue btn-lg later"  ng-click='deny()'>
+        
+            <img src="../img/later.svg" height="20px"/> &nbsp; Later
+        
+        </button>
+            
+        <button class="btn btn-success btn-green btn-lg" ng-click='accept()'>
+        
+            <img src="../img/hell-yes.svg" height="20px"/> &nbsp; Hell yes!
+        
+        </button>
         </div>
     </div>
-</div>
+
+
+
 
 
 </div>

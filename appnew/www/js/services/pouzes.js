@@ -6,17 +6,20 @@ pouzApp.value('interruptions', {
     'health': {
       title: 'Health',
       description: 'Healthy pouzes...',
-      picture: ''
+      picture: '',
+      color: 'green'
     },
     'social': {
       title: 'Social',
       description: 'Be social!',
-      picture: ''
+      picture: '',
+      color: 'blue'
     },
     'fun': {
       title: 'Fun',
       description: 'Fun is fun',
-      picture: ''
+      picture: '',
+      color: 'yellow'
     }
   },
 
@@ -309,7 +312,7 @@ pouzApp.value('interruptions', {
             "We would like to see this!"
         ],
         "picture": "img/pouz_icons/3-01.png",
-        "title": "Touch your elbow with your tongue"
+        "title": "Tongue your elbow"
     },
     "3.10": {
         "category": "fun",
