@@ -96,7 +96,7 @@ io.sockets.on("connection", function (socket) {
 
 	socket.on("react", function(data) {
 		console.log("react: ", data);
-		if (data.fbId && data.senderFbId && data.reaction && data.label) {
+		if (data.senderFbId && data.reaction && data.label) {
 			sendMessage(data.senderFbId, "reaction", {
 				"label": data.label,
 				"senderFbId": socket.fbId,
