@@ -53,6 +53,20 @@ pouzApp.service('FBConnection', [ '$http', function( $http) {
       //turn list;
     },
 
+    get_friend: function(fbId) {
+      if (!fbId) {
+        return false;
+      }
+
+      for (var i = friends_cache.data.length - 1; i >= 0; i--) {
+        if (friends_cache.data[i].id == fbId) {
+          return friends_cache.data[i];
+        }
+      };
+
+      return false;
+    },
+
     user_id: function() {
       return userConnection.uid;
     },

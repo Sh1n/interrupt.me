@@ -30,7 +30,7 @@ pouzApp.service('notifications', function() {
     else
     {
       // go directly and display the interruptions
-      alert('Interuption! ' + e.label);
+      DEBUG && alert('Interuption! ' + e.label);
     }
   }
 

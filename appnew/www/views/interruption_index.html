@@ -21,7 +21,7 @@
           <!-- Fun -->
           <div class="tab-pane" ng-class='{active: $index == 0}' id="{{cat_key}}" ng-repeat='(cat_key, cat) in categories'>
               <div class="col-xs-6 pouz" ng-repeat='(pouz_key, interruption) in interruptions' ng-if='interruption.category == cat_key'>
-                  <a href="#" ng-click='open(pouz_key, interruption)'>
+                  <a ng-click='open(pouz_key, interruption)'>
                       <div class="centered">
                           <img class="img-rounded interruption-picture" src="{{interruption.picture}}" alt=""/>
                           <div class="pouz-title">{{interruption.title}}</div>

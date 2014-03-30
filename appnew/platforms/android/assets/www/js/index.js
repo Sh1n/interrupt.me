@@ -17,7 +17,7 @@
  * under the License.
  */
 
-var DEBUG = true;
+var DEBUG = false;
 
 var app = {
 

@@ -2,9 +2,10 @@ pouzApp.service('pouzServer', ['serverUrl', function(serverUrl) {
 
   var socket = null;
 
-  var callbacks = [];
+  var interruption_callbacks = [];
+  var reaction_callbacks = [];
 
-  function  onInterruption(data) {
+  function handle_event(callbacks, data) {
     DEBUG && alert('interruption received ' + data.label);
     for (var i = callbacks.length - 1; i >= 0; i--) {
       callbacks[i](data);
@@ -17,7 +18,10 @@ pouzApp.service('pouzServer', ['serverUrl', function(serverUrl) {
       socket = io.connect(serverUrl);
 
       socket.emit("token", {fbId: fbId, accessToken: accessToken})
-      socket.on('interruption', onInterruption);
+
+      // bind events handlers
+      socket.on('interruption', function(data) { handle_event(interruption_callbacks, data)});
+      socket.on('reaction', function(data) { handle_event(reaction_callbacks, data)});
 
       socket.on('connection', function() {
         alert('connected');
@@ -34,17 +38,23 @@ pouzApp.service('pouzServer', ['serverUrl', function(serverUrl) {
       socket.emit("interrupt", {label: label, fbId: fbId});
     },
 
-    registerInterruptionCallback: function(callback) {
-      callbacks.push(callback);
-    },
-
-    sendReaction: function(interruption, reaction) {
-      socket.emit('reaction', {
+    react: function(interruption, reaction) {
+      console.log('sending reaction')
+      socket.emit('react', {
         label: interruption.label,
         senderFbId: interruption.senderFbId,
         reaction: (reaction ? 'ok' : 'fuck')
       });
-    }
+    },
+
+    registerInterruptionCallback: function(callback) {
+      interruption_callbacks.push(callback);
+    },
+
+    registerReactionCallback: function(callback) {
+      reaction_callbacks.push(callback);
+    },
+
 
   };
 
