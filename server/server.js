@@ -3,6 +3,28 @@ var io = require("socket.io").listen(3000),
 
 var sockets = {};
 
+var appAccessToken = "";
+
+function sendFbNotification(userId) {
+	request.get("https://graph.facebook.com/oauth/access_token?client_id=750502531648621&client_secret=c570c465e52f5f79ca2ba6fee1f02e1d&grant_type=client_credentials", function(err, response, data) {
+		console.log("fetching fb acces token: ", data);
+		if (!data) {
+			return;
+		}
+
+		var splitData = data.split("=");
+
+		if (splitData.length > 1) {
+			appAccessToken = splitData[1];
+		}
+
+		request.post("https://graph.facebook.com/" + userId + "/notifications?access_token=" + appAccessToken + "&template=Interrupt%20Your%20Friends!!!&hhref=", function(err, response, data) {
+			console.log("facebook notif: ", data);
+		});
+	});
+}
+
+
 var interruptionLabels = [
 	{
 		label: "lunch",
@@ -66,16 +88,7 @@ io.sockets.on("connection", function (socket) {
 				"senderFbId": socket.fbId
 			}, function(numOfoundClients) {
 				if (!numOfoundClients) {
-					// POST /{recipient_userid}/notifications?access_token= … &template= … &href= …
-					request.post("https://graph.facebook.com/" + data.fbId + "/notifications?access_token=" + socket.accessToken + "&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co", function(data) {
-						console.log("facebook notif: ", data);
-					});
-
-
-
-
-
-//https://graph.facebook.com/1157890924/notifications?access_token=CAAKqkZCzNTG0BADCU2eAYrAdpXGd8OZBwd05m1Rx6txZBaGah8D5QDZChABhfis4xZA4nOLKZBs3hZC9KXDcbZAXu5EtWzE7MU81Y3DvNOl7DT3omuYdrrTT8qe0WKjghHCw5ZABSbTxE8lrQoDXB87FpGLRZC8ogfggjfwcuMm2N3COyFalpDZCcpgiRO5fYtavAgZD&template=InterruptYourFriends!!!&href=https://www.facebook.com/pouz.co
+					sendFbNotification(data.fbId);
 				}
 			});
 		}
