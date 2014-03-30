@@ -1,7 +1,8 @@
-pouzApp.controller('PouzReceivedController', ['$scope','interruptions', 'pouzServer', function($scope, interruptions, pouzServer) {
+pouzApp.controller('PouzReceivedController', ['$scope','interruptions', 'pouzServer', 'FBConnection', function($scope, interruptions, pouzServer, FBConnection) {
 
   $scope.interruption = interruptions.interruptions[$scope.view_params.label];
 
+  $scope.sender = FBConnection.get_friend($scope.view_params.senderFbId);
 
 
   $scope.accept = function() {
