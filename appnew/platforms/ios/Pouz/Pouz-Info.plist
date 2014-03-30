@@ -91,6 +91,12 @@
           <string>fb750502531648621</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb750502531648621</string>
+        </array>
+      </dict>
     </array>
   </dict>
 </plist>

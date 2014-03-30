@@ -1,6 +1,18 @@
 <div ng-controller='InterruptionController'>
 
-<a href="#"  ng-click='back()'>Back</a>
+<div class="container-fluid">
+<div class="row-fluid clearfix" id="header">
+
+        <div class="col-xs-3">
+            <a href="#"  ng-click='back()'>&lt; BACK</a>
+        </div>
+
+        <div class="col-xs-6 col-xs">
+            <img src="img/logo-pouz.svg" alt="Pouz" style="margin-top: 10px;"/>
+        </div>
+
+    </div>
+    </div>
 
 <div ng-include='"views/" + subview + ".html"'></div>
 

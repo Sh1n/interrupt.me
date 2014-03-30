@@ -1,2 +1,2 @@
-/Users/andreifiroiu/Desktop/devel/pouz/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/andreifiroiu/Desktop/devel/pouz/platforms/android/AndroidManifest.xml \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/ant-build/AndroidManifest.xml : \
+/home/docx/Dev/interrupt.me/appnew/platforms/android/AndroidManifest.xml \

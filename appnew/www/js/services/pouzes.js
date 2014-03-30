@@ -28,6 +28,12 @@ pouzApp.value('interruptions', {
       description: 'You should not starve!',
       picture: ''
     },
+    'stretch': {
+      category: 'health',
+      title: 'Do some stretch',
+      description: 'Stretch!',
+      picture: ''
+    },
   }
 
 });
