@@ -78,7 +78,7 @@ io.sockets.on("connection", function (socket) {
 			sockets[data.fbId] = sockets[data.fbId] || [];
 			sockets[data.fbId].push(socket);
 
-			var filteredLabels = interruptionLabels.filter(createFilterForTime(socketArr[0].timeZoneOffset));
+			var filteredLabels = interruptionLabels.filter(createFilterForTime(data.timeZoneOffset));
 
 			var label = randomInterruption(filteredLabels);
 
